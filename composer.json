@@ -1,6 +1,6 @@
 {
-    "name": "shahinam/shade-project",
-    "description": "Project template for Drupal 8 sites built with the Shade distribution.",
+    "name": "shahinam/alimdaad",
+    "description": "Al Imdaad Trust Drupal wensite.",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "dev",
