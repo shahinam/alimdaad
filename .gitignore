@@ -86,7 +86,7 @@ tramp
 xhprof_*
 
 # Composer vendor
-vendor/
+#vendor/
 vendor/.git
 
 # Sass
