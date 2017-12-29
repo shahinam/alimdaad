@@ -2,7 +2,7 @@
 settings.local.php
 
 # Ignore drupal core.
-docroot/core
+#docroot/core
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files
@@ -10,10 +10,10 @@ docroot/sites/*/files
 docroot/sites/*/private
 
 # Ignore contrib modules. These should be created during build process.
-docroot/modules/contrib
-docroot/themes/contrib
-docroot/profiles/contrib
-docroot/libraries
+#docroot/modules/contrib
+#docroot/themes/contrib
+#docroot/profiles/contrib
+#docroot/libraries
 
 # Ignore custom theme build artifacts
 docroot/themes/custom/*/node_modules

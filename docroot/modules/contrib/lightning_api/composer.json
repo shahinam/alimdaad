@@ -1,0 +1,7 @@
+{
+    "name": "acquia/lightning_api",
+    "description": "Progressive decoupling? No problem.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}
+

@@ -1,0 +1,7 @@
+{
+    "name": "acquia/lightning_layout",
+    "description": "Provides the tools to take control of your layout.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}
+
