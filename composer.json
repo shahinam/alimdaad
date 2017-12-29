@@ -1,12 +1,12 @@
 {
     "name": "shahinam/alimdaad",
-    "description": "Al Imdaad Trust Drupal wensite.",
+    "description": "Al Imdaad Trust website.",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "shahinam/shade": "^2.0"
+        "shahinam/shade": "^3.0"
     },
     "require-dev": {},
     "scripts": {
@@ -21,7 +21,16 @@
     "bin": [],
     "extra": {
         "enable-patching": true,
-        "patches": {},
+        "patches": {
+        },
+        "installer-types": [
+            "drupal-custom-module",
+            "drupal-custom-profile",
+            "drupal-custom-theme",
+            "drupal-library",
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -45,7 +54,9 @@
                 "type:drupal-custom-theme"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
@@ -56,6 +67,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ]
 }
