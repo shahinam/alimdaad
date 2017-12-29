@@ -1,0 +1,14 @@
+uuid: 876df45e-ccbe-47ca-9703-197f44f09f87
+name: 'Al Imdaad Trust'
+mail: mohdinamshah@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
