@@ -1247,6 +1247,57 @@
             }
         },
         {
+            "name": "drupal/components",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/components",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "adb1872a655466d575c2d3396f7ca2daba0a2918"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1461060840",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
+            "homepage": "https://www.drupal.org/project/components",
+            "support": {
+                "source": "http://cgit.drupalcode.org/components"
+            }
+        },
+        {
             "name": "drupal/config_update",
             "version": "1.5.0",
             "source": {
@@ -4194,6 +4245,61 @@
             }
         },
         {
+            "name": "drupal/zen",
+            "version": "7.0.0-alpha14",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/zen",
+                "reference": "8.x-7.0-alpha14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/zen-8.x-7.0-alpha14.zip",
+                "reference": "8.x-7.0-alpha14",
+                "shasum": "5e9c8f3d4a7c1867173f7219db3791c15b755899"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x": "7.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-7.0-alpha14",
+                    "datestamp": "1464881343",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "KrisBulman",
+                    "homepage": "https://www.drupal.org/user/190735"
+                },
+                {
+                    "name": "echoz",
+                    "homepage": "https://www.drupal.org/user/38665"
+                }
+            ],
+            "description": "Zen sub-themes are the ultimate starting themes for Drupal 8. Read the <a href=\"https://drupal.org/node/873778\">online docs</a> or the included README-FIRST.txt on how to create a theme with Zen.",
+            "homepage": "https://www.drupal.org/project/zen",
+            "support": {
+                "source": "http://cgit.drupalcode.org/zen"
+            }
+        },
+        {
             "name": "easyrdf/easyrdf",
             "version": "0.9.1",
             "source": {
@@ -5201,12 +5307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shahinam/shade.git",
-                "reference": "e0304f488307e3481bc12f2a33161d6212496146"
+                "reference": "a77f52e119741ece26b4b1d271b120a147f5d381"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shahinam/shade/zipball/e0304f488307e3481bc12f2a33161d6212496146",
-                "reference": "e0304f488307e3481bc12f2a33161d6212496146",
+                "url": "https://api.github.com/repos/shahinam/shade/zipball/a77f52e119741ece26b4b1d271b120a147f5d381",
+                "reference": "a77f52e119741ece26b4b1d271b120a147f5d381",
                 "shasum": ""
             },
             "require": {
@@ -5217,7 +5323,8 @@
                 "drupal/paragraphs": "^1.2",
                 "drupal/redirect": "^1.0",
                 "drupal/shield": "^1.1",
-                "roave/security-advisories": "dev-master"
+                "roave/security-advisories": "dev-master",
+                "shahinam/zenshade": "3.x-dev"
             },
             "type": "drupal-profile",
             "extra": {
@@ -5268,7 +5375,33 @@
                 "MIT"
             ],
             "description": "A Drupal distribution based on Lightning, with commonly used components.",
-            "time": "2017-12-29T20:19:14+00:00"
+            "time": "2018-01-02T18:29:30+00:00"
+        },
+        {
+            "name": "shahinam/zenshade",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shahinam/zenshade.git",
+                "reference": "c330208f916030e5d93f6e54c4910354e63e006b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shahinam/zenshade/zipball/c330208f916030e5d93f6e54c4910354e63e006b",
+                "reference": "c330208f916030e5d93f6e54c4910354e63e006b",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/components": "^1.0",
+                "drupal/zen": "^7.0"
+            },
+            "type": "drupal-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A reusable theme based on popular Zen theme.",
+            "time": "2018-01-02T19:02:40+00:00"
         },
         {
             "name": "stack/builder",
