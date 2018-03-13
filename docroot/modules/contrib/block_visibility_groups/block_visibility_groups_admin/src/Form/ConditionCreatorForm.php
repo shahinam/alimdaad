@@ -108,8 +108,7 @@ class ConditionCreatorForm extends FormBase {
         ]
       );
 
-      if ($label = $creator->getNewConditionLabel()) {
-
+      if ($creator->getNewConditionLabel()) {
         $elements[$id] = $creator->createConditionElements();
       }
     }

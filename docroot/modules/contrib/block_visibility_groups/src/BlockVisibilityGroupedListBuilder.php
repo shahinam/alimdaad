@@ -219,7 +219,7 @@ class BlockVisibilityGroupedListBuilder extends BlockListBuilder {
     $form = parent::buildBlocksForm();
     $show_global_in_group = $this->getShowGlobalWithGroup();
     if ($block_visibility_group = $this->getBlockVisibilityGroup(TRUE)) {
-      foreach ($form as $row_key => &$row_info) {
+      foreach ($form as &$row_info) {
         if (isset($row_info['title']['#url'])) {
           /** @var \Drupal\Core\Url $url */
           $url = $row_info['title']['#url'];
@@ -237,15 +237,13 @@ $row_info['title']['#url'] = $url;
 // $url->setOption('query', $query);.
         }
         if (isset($row_info['operations']['#links']) && $row_info['operations']['#links']) {
-          foreach ($row_info['operations']['#links'] as $op => &$op_info) {
+          foreach ($row_info['operations']['#links'] as &$op_info) {
             $url = $op_info['url'];
             $query = $url->getOption('query');
             $query['block_visibility_group'] = $block_visibility_group;
             $url->setOption('query', $query);
           }
-
         }
-
       }
     }
 
@@ -255,9 +253,7 @@ $row_info['title']['#url'] = $url;
     ) {
       $this->addGroupColumn($form);
     }
-
     return $form;
-
   }
 
   /**

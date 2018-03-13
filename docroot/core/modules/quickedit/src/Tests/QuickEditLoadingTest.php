@@ -330,6 +330,13 @@ class QuickEditLoadingTest extends WebTestBase {
   public function testWithPendingRevision() {
     $this->drupalLogin($this->editorUser);
 
+    // Verify that the preview is loaded correctly.
+    $this->drupalPostForm('node/add/article', ['title[0][value]' => 'foo'], 'Preview');
+    $this->assertResponse(200);
+    // Verify that quickedit is not active on preview.
+    $this->assertNoRaw('data-quickedit-entity-id="node/' . $this->testNode->id() . '"');
+    $this->assertNoRaw('data-quickedit-field-id="node/' . $this->testNode->id() . '/title/' . $this->testNode->language()->getId() . '/full"');
+
     $this->drupalGet('node/' . $this->testNode->id());
     $this->assertRaw('data-quickedit-entity-id="node/' . $this->testNode->id() . '"');
     $this->assertRaw('data-quickedit-field-id="node/' . $this->testNode->id() . '/title/' . $this->testNode->language()->getId() . '/full"');
@@ -340,8 +347,25 @@ class QuickEditLoadingTest extends WebTestBase {
     $this->testNode->save();
 
     $this->drupalGet('node/' . $this->testNode->id());
+    $this->assertResponse(200);
     $this->assertNoRaw('data-quickedit-entity-id="node/' . $this->testNode->id() . '"');
     $this->assertNoRaw('data-quickedit-field-id="node/' . $this->testNode->id() . '/title/' . $this->testNode->language()->getId() . '/full"');
+  }
+
+  /**
+   * Test the latest revision of entities are loaded on the form route.
+   */
+  public function testLatestRevisionLoaded() {
+    $this->drupalLogin($this->editorUser);
+
+    $this->testNode->setNewRevision(TRUE);
+    $this->testNode->isDefaultRevision(FALSE);
+    $this->testNode->title = 'latest revision title';
+    $this->testNode->save();
+
+    $response = $this->drupalPost('quickedit/form/node/1/title/en/full', '', [], ['query' => [MainContentViewSubscriber::WRAPPER_FORMAT => 'drupal_ajax']]);
+    $this->setRawContent($response);
+    $this->assertRaw('latest revision title');
   }
 
   /**

@@ -62,7 +62,7 @@ class ConditionGroup extends ConditionPluginBase implements ContainerFactoryPlug
     if (empty($block_visibility_group_id)) {
       return TRUE;
     }
-    /** @var BlockVisibilityGroup $block_visibility_group */
+    /** @var \Drupal\block_visibility_groups\Entity\BlockVisibilityGroup $block_visibility_group */
     if ($block_visibility_group = $this->entityStorage->load($block_visibility_group_id)) {
       return $this->groupEvaluator->evaluateGroup($block_visibility_group);
     }

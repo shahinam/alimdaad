@@ -7,9 +7,7 @@ use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class BlockVisibilityGroupForm.
- *
- * @package Drupal\block_visibility_groups\Form
+ * Entity form for Block Visibility Group entity.
  */
 class BlockVisibilityGroupForm extends EntityForm {
 
@@ -20,7 +18,7 @@ class BlockVisibilityGroupForm extends EntityForm {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form = parent::form($form, $form_state);
-    /** @var BlockVisibilityGroup $block_visibility_group */
+    /** @var \Drupal\block_visibility_groups\Entity\BlockVisibilityGroup $block_visibility_group */
     $block_visibility_group = $this->entity;
     $form['label'] = array(
       '#type' => 'textfield',
